@@ -1,0 +1,20 @@
+<!-- Wrapper -->
+<div class="wrapper">
+    <!-- Formulario -->
+    <form (submit)="onSubmit($event)" class="login">
+        <h2>Registrarse</h2>			
+        <!-- Contenedor del Formulario -->
+        <div class="login-container">
+            <label>Nombre Completo</label>
+            <input [(ngModel)]="fullName" type="text" name="fullName" placeholder="Ingresar Nombre completo">
+
+            <label>Correo</label>
+            <input [(ngModel)]="email" type="email" name="email" placeholder="Ingresar Correo">
+            
+            <label>Contraseña</label>
+            <input [(ngModel)]="password" type="password" name="password" placeholder="Ingresar Contraseña">
+
+            <input type="submit" value="Register" class="primary_action">
+        </div>
+    </form>
+</div>

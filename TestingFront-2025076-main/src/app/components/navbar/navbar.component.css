@@ -1,0 +1,191 @@
+/* ======== HEADER ======== */
+header {
+	background: linear-gradient(90deg, #007bff, #0048a8);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px 25px;
+	color: #fff;
+	z-index: 10;
+}
+
+/* ======== LOGO ======== */
+.logo strong {
+	display: inline-block;
+	font-size: 1.7rem;
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 0.5px;
+}
+
+/* ======== BURGER MENU ======== */
+.burger {
+	background-color: transparent;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	border-radius: 8px;
+	transition: background 0.3s ease;
+}
+
+.burger:hover {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+/* ======== NAVBAR ======== */
+.navbar {
+	display: none;
+}
+
+/* ======== MOBILE MENU ======== */
+.mobile-menu {
+	background: rgba(0, 24, 61, 0.92);
+	backdrop-filter: blur(6px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	color: #fff;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.links a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: 500;
+	position: relative;
+	padding: 10px 0;
+	transition: color 0.3s ease;
+}
+
+.links a:hover {
+	color: #cce5ff;
+}
+
+.links a li {
+	display: inline-block;
+	position: relative;
+}
+
+/* Subrayado animado */
+.links a li::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.3s ease;
+}
+
+.links a li:hover::after {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+/* ======== ICONS ======== */
+.icons {
+	display: flex;
+	padding: 10px;
+	gap: 1rem;
+}
+
+.icons a li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.icons a li:hover {
+	transform: scale(1.15);
+	color: #b0d4ff;
+}
+
+.icon {
+	font-size: 1.6rem;
+}
+
+/* ======== DESKTOP ======== */
+@media screen and (min-width: 767px) {
+	.burger {
+		display: none;
+	}
+
+	header {
+		padding: 15px 40px;
+	}
+
+	.navbar {
+		display: flex;
+		align-items: center;
+		background: none;
+	}
+
+	.links {
+		flex-direction: row;
+		gap: 2rem;
+	}
+
+	.links a {
+		padding: 0;
+	}
+
+	.icons {
+		order: 2;
+		gap: 1.2rem;
+	}
+}
+
+/* ======== CONTENIDO ======== */
+.content {
+	padding: 30px;
+}
+
+/* ======== BOTÓN DE LOGOUT ======== */
+.logout-button {
+	background: linear-gradient(90deg, #007bff, #0048a8);
+	color: #fff;
+	border: none;
+	padding: 10px 25px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 600;
+	border-radius: 8px;
+	box-shadow: 0 3px 8px rgba(0, 72, 168, 0.4);
+	transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+	background: linear-gradient(90deg, #0090e0, #005ccc);
+	box-shadow: 0 5px 12px rgba(0, 92, 204, 0.5);
+	transform: translateY(-1px);
+}

@@ -1,0 +1,75 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+/* 🎨 CSS Variables — Paleta de colores en tonos azules */
+:root {
+	--primary-color: #007bff;        /* Azul principal */
+	--primary-dark: #0048a8;         /* Azul oscuro */
+	--primary-light: #e6f0ff;        /* Azul muy claro */
+	--accent-color: #00aaff;         /* Azul brillante/acento */
+	--neutral-bg: #f5f7fa;           /* Fondo neutro claro */
+	--text-color: #1e293b;           /* Gris azulado para texto */
+	--text-light: #ffffff;           /* Blanco para fondos oscuros */
+	--shadow-color: rgba(0, 0, 0, 0.1);
+	--radius: 10px;                  /* Radio estándar */
+	--transition: all 0.3s ease;
+}
+
+/* 🧩 Configuración general */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* 🖋️ Tipografía y fondo base */
+body {
+	background: linear-gradient(180deg, var(--primary-light), var(--neutral-bg));
+	font-family: 'Poppins', sans-serif;
+	color: var(--text-color);
+	min-height: 100vh;
+	line-height: 1.6;
+	overflow-x: hidden;
+}
+
+/* 🔗 Enlaces globales */
+a {
+	color: var(--primary-color);
+	text-decoration: none;
+	transition: var(--transition);
+}
+
+a:hover {
+	color: var(--accent-color);
+	text-decoration: underline;
+}
+
+/* 🧱 Contenedores generales */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+/* 🪄 Botones genéricos */
+button {
+	font-family: 'Poppins', sans-serif;
+	border: none;
+	border-radius: var(--radius);
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+button.primary {
+	background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+	color: var(--text-light);
+	padding: 10px 24px;
+	font-size: 1rem;
+	font-weight: 600;
+	box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+button.primary:hover {
+	background: linear-gradient(90deg, var(--accent-color), var(--primary-dark));
+	transform: translateY(-2px);
+	box-shadow: 0 6px 18px rgba(0, 72, 168, 0.3);
+}
