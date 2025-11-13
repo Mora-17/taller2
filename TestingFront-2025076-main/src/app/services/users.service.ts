@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UsersService {
 
-    private apiUrl = "http://13.59.110.86:9000/usuarios"
+    private apiUrl = "http://localhost:9000/usuarios"
     private _httpClient = inject(HttpClient);
 
     postUser(fullName: string, email: string, password: string){

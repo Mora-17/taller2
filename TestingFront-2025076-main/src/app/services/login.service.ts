@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class LoginService {
 
-  private apiUrl = "http://13.59.110.86:9000/iniciarSesion"
+  private apiUrl = "http://localhost:9000/iniciarSesion"
   private _httpClient = inject(HttpClient);
   private _router = inject(Router);
 
