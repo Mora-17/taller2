@@ -6,5 +6,5 @@ ejemplo funcionando
 
 ![Logo](imgs/2.png)
 ejemplo fallado a proposito
-![Logo](imgs/5.png)
+![Logo](imgs/3.png)
 Servicios funcionando correctamente
